@@ -342,6 +342,7 @@ void MyFrame::button9(wxCommandEvent& event) {
 		strcat(number1, "9");
 		resultN1 = number1;
 		StoreNumber1 = std::stoi(resultN1);
+		MyFrame::UpdateMainScreen();
 	}
 	else
 	{
@@ -433,6 +434,10 @@ void MyFrame::buttonEqual(wxCommandEvent& event) {//Mostrar o conteudo da variá
 		SavedResult = Subt(StoreNumber1, StoreNumber2);
 		MyFrame::EnableAlgebra();
 		  //Updates the screen
+	}
+	else
+	{
+		SavedResult = StoreNumber1;
 	}
 	
 	std::string mensagem = std::to_string(SavedResult);
