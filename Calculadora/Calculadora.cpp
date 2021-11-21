@@ -22,10 +22,10 @@ std::string resultN1, resultN2;
 char number1[20];
 char number2[20];
 
-long int StoreNumber1 =0;
-long int StoreNumber2 =0;
+float StoreNumber1 =0;
+float StoreNumber2 =0;
 
-long int SavedResult = 0;
+double SavedResult = 0;
 
 class MyApp : public wxApp
 {
@@ -373,6 +373,7 @@ void MyFrame::buttonDiv(wxCommandEvent& event) {
 	
 	ReadyToDiv = true;
 	MyFrame::DisableAlgebra();
+	m_button0->Disable();
 
 	MyFrame::UpdateMainScreen();  //Updates the screen
 }
@@ -439,7 +440,6 @@ void MyFrame::buttonEqual(wxCommandEvent& event) {//Mostrar o conteudo da variá
 	{
 		SavedResult = StoreNumber1;
 	}
-	
 	std::string mensagem = std::to_string(SavedResult);
 	resultN2 += mensagem;
 

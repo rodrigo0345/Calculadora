@@ -3,7 +3,8 @@
 #include "resource.h"
 
 
-long double Sum(int a, int b);
-long double Mult(int a, int b);
-long double Div(int a, int b);
-long double Subt(int a, int b);
+
+long double Sum(float a, float b);
+long double Mult(float a, float b);
+long double Div(float a, float b);
+long double Subt(float a, float b);
